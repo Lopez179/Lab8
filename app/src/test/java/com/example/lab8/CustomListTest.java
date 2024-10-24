@@ -42,12 +42,11 @@ public class CustomListTest {
     void testDeleteCity() {
         list = MockCityList();
         City city1 = new City("Charlottetown", "Prince Edward Island");
-        City city2 = new City("Charlottetown", "Maine");
+        City city2 = new City("Paris", "Ille-de-France");
         list.addCity(city1);
-        list.deleteCity(city2);
+        list.addCity(city2);
+        list.deleteCity(city1);
         assertEquals(list.getCities().size(),1);
-
-        City city3 = new City("Paris", "Ille-de-France");
     }
 
     @Test
